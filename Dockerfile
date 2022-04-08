@@ -9,12 +9,9 @@ RUN \
   apk add vsftpd
 
   
-
 COPY src/vsftpd.conf /etc/vsftpd/vsftpd.conf
-# COPY src/php/www.conf /etc/php7/php-fpm.d/www.conf
-# COPY src/index.html ./
-# COPY src/info.php ./
 
+COPY src/welcome_ftp_dir_for_anonymous ./
 
 ENV \
   FTP_USER=ftpuser \
@@ -23,8 +20,6 @@ ENV \
 
 RUN echo "vsftpd构建完成"
 
-
-# #可挂载目录：虚拟主机配置目录，www目录，日志目录
 VOLUME ["/etc/vsftpd", "/ftproot"]
 
 EXPOSE 21
