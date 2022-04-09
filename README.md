@@ -3,12 +3,16 @@
 ### 启动容器
   
 匿名帐户型(挂载目录,侦听端口):  
+```
 root@deb11:~# podman run -itd --name ftpd -p 2121:21 -v /ftproot:/ftproot ftpd  
 或
 root@deb11:~# podman run -itd --name ftpd --net host -v /ftproot:/ftproot ftpd  
+```
 
 系统用户(完整版): 设置用户名和密码(abc:123),侦听端口,并挂载到本地目录
+```
 root@deb11:~# podman run -itd --name ftpd -p 2121:21 -v /ftproot:/home -e FTP_USER=abc -e FTP_PASS=123 ftpd
+```
 
 **说明**:在测试时,root启动容器不用映射20端口.非root即使映射20端口也没有,使用`--net host`方有效.
 
