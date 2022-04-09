@@ -1,4 +1,4 @@
-# docker for vsftpd
+# alpine+vsftpd
 
 ### 启动容器
   
@@ -44,7 +44,7 @@ ftp> bye
 221 Goodbye.
 ```
 
-示例一:匿名登陆
+示例二:密码登陆
 ```
 root@deb11:~# podman run -itd --name ftpd -p 2121:21 -v /ftproot:/home -e FTP_USER=abc -e FTP_PASS=123 ftpd
 
