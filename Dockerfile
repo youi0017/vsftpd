@@ -1,5 +1,3 @@
-#alpine-mariadb:https://wiki.alpinelinux.org/wiki/MariaDB
-
 FROM alpine
 
 WORKDIR /ftproot
