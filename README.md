@@ -52,9 +52,7 @@ pasv_address=10.0.0.1
 pasv_min_port=21001
 pasv_max_port=21009
 
-
 //上面内容保存后，ctrl+D退出容器
-
 
 ```
 
@@ -117,11 +115,3 @@ ftp> ls
 ftp>
 221 Goodbye.
 ```
-
-
-
-
-
-
-
-
